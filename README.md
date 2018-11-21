@@ -69,48 +69,48 @@ Things you may want to cover:
 |delovery_method|string|null: false|
 |delovery_days|string|null: false|
 |price|string|null: false, validates :price,numericality: { greater_than: 200, less_than: 10000000}|
-|first_category_id|integer|null: false, foreign_key: true|
-|second_category_id|integer|null: false, foreign_key: true|
-|third_category_id|integer|null: false, foreign_key: true|
 |bland_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user, dependent: :destroy,foreign_key: "user_id"
-- belongs_to :first_category
-- belongs_to :second_category
-- belongs_to :third_category
+- has_many :categories,through: :category_groups
+- has_many :category_groups
 - belongs_to :bland
 - has_many :item_images, dependent::destroy
 
-## first_categorysテーブル
+## item_statusテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|status|integer|enum status:{saved:0, buying:1, sold:2}|
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
+
+## category_gorupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|category_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
+- belongs_to :category
+
+## categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-
-
-### Association
-- has_many :items
-
-## second_categorysテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
+|lft|integer|null: false|
+|rgh|integer|null: false|
+|level|integer|null: false|
 
 ### Association
-- has_many :items
-
-## third_categorysテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-
-### Association
-- has_many :items
+- has_many :items, through: :category_groups
+- has_many :category_groups
 
 ## blandsテーブル
 
@@ -135,7 +135,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :item, dependent: :destroy,foreign_key: "item_id"
 
-## reviewssテーブル
+## reviewsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
