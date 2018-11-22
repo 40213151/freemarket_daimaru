@@ -29,7 +29,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false, add_index, unique: true|
+|nickname|string|null: false, index: true, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 
@@ -47,14 +47,14 @@ Things you may want to cover:
 |first_name_kana|string|null: false|
 |last_name_kana|string|null: false|
 |postal_code|integer|null: false|
-|pfefecture|string|null: false|
+|prefecture|string|null: false|
 |city|string|null: false|
-|adress|string|null: false, unique: true|
+|address|string|null: false, unique: true|
 |building_name|string||
 |phone_number|string||
 |birthday|date|null: false|
 |profile_text|text||
-|user_image|string||
+|profile_image|string||
 
 ### Association
 - belongs_to :user, dependent: :destroy,foreign_key: "user_id"
@@ -63,19 +63,19 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|item_name|string|null: false, add_index, length: {maximum: 40}|
+|name|string|null: false, index: true, length: {maximum: 40}|
 |description|text|null: false, length: {maximum: 1000}|
 |condition|string|null: false|
-|delovery_method|string|null: false|
-|delovery_days|string|null: false|
+|delivery_method|string|null: false|
+|delivery_days|integer|null: false|
 |price|string|null: false, validates :price,numericality: { greater_than: 200, less_than: 10000000}|
-|bland_id|integer|foreign_key: true|
+|brand_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user, dependent: :destroy,foreign_key: "user_id"
 - has_many :categories,through: :category_groups
 - has_many :category_groups
-- belongs_to :bland
+- has_one :brand
 - has_many :item_images, dependent::destroy
 
 ## item_statusテーブル
@@ -83,17 +83,17 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |status|integer|enum status:{saved:0, buying:1, sold:2}|
-|item_id|integer|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
 
-## category_gorupsテーブル
+## category_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|category_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
+|category|references|null: false, foreign_key: true|
+|item|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -105,24 +105,22 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 |lft|integer|null: false|
-|rgh|integer|null: false|
+|rgt|integer|null: false|
 |level|integer|null: false|
 
 ### Association
 - has_many :items, through: :category_groups
 - has_many :category_groups
 
-## blandsテーブル
+## brandsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|add: index|
+|name|string|index: true|
 
 
 ### Association
 - has_many :items
-
-### Association
 - belongs_to :item, dependent: :destroy,foreign_key: "item_id"
 
 ## item_imagesテーブル
@@ -134,13 +132,3 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :item, dependent: :destroy,foreign_key: "item_id"
-
-## reviewsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|review|integer|enum status: { good: 0, medium: 1, bad: 2 }|
-
-
-### Association
-- belongs_to :user, foreign_key: "user_id"
