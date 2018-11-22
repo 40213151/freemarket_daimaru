@@ -35,7 +35,6 @@ Things you may want to cover:
 
 ### Association
 - has_many :items, dependent: :destroy
-- has_many :reviews, dependent: :destroy
 - has_many :user_profiles, dependent: :destroy
 
 ## users_profilesテーブル
@@ -83,7 +82,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |status|integer|enum status:{saved:0, buying:1, sold:2}|
-|item_id|references|null: false, foreign_key: true|
+|item|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
