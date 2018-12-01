@@ -1,0 +1,40 @@
+.clearfix{
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+body{
+  background: #f5f5f5;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.white{
+  background-color: #fff;
+}
+
+.visible-pc {
+  display: block;
+}
+
+.l-left{
+  float: left;
+}
+
+.l-right{
+  float: right;
+}

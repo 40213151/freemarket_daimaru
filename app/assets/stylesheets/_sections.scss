@@ -1,0 +1,95 @@
+.pickup-container{
+  padding: 40px 0;
+  background: #f5f5f5;
+  &__head{
+    font-size: 28px;
+    text-align: center;
+  }
+  .items-box-container{
+    width: 940px;
+    margin: 0 auto;
+    h3{
+      font-size: 22px;
+      margin: 26px 11px;
+      a{
+      }
+    }
+    .items-box-content.clearfix{
+      width: auto;
+      margin: 0 auto;
+      .items-box{
+        margin: 0 0 0 20px;
+        width: 213px;
+        position: relative;
+        float: left;
+        background: #fff;
+        &__photo{
+          height: 220px;
+          overflow: hidden;
+          position: relative;
+          margin: 0;
+          .is-higher-width{
+            width: auto;
+            left: 50%;
+            right: auto;
+            height: 100%;
+            transform: translate(-50%, 0);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1
+          }
+        }
+        &__body{
+          padding: 16px;
+          height: 110px;
+          &__name{
+            overflow: hidden;
+            position: relative;
+            font-weight: 400;
+            height: 1.1em;
+            line-height: 1.5;
+            word-break: break-word;
+            white-space: normal;
+          }
+          &__num{
+            margin: 8px 0 0;
+            &__price{
+              font-size: 20px;
+              float: left;
+            }
+            &__likes{
+              float: right;
+              i{
+                margin: 0 4px 0 0;
+                vertical-align: middle;
+              }
+              span{
+                display: inline-block;
+                margin: 1px 0 0;
+                vertical-align: middle;
+              }
+            }
+            &__tax{
+              font-size: 10px;
+              clear: both;
+            }
+          }
+        }
+        a{
+          display: block;
+          color: #333;
+        }
+      }
+    }
+    .view-all{
+      padding: 20px 0 30px;
+      width: 99.5%;
+      text-align: right;
+      a{
+      color: #0099e8;
+      text-decoration: none;
+      }
+    }
+  }
+}

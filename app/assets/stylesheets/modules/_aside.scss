@@ -1,0 +1,89 @@
+figure{
+  margin: 0;
+}
+
+.app-banner::before{
+  /* 透過した黒を重ねる */
+  background-color: rgba(0,0,0,0.2);
+  /* どの範囲に重ねるかを指定 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+
+.app-banner{
+  background: url("https://image.freepik.com/free-photo/no-translate-detected_1253-1328.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height:100%;
+  &__pc{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    &__inner{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      h2{
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 24px;
+        margin: 0;
+        color: #fff;
+      }
+      p{
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 35px;
+        margin: 10px 0 0;
+        color: #fff;
+      }
+      &__icon{
+        margin: 20px 0 0;
+        figure{
+          float: left;
+          img{
+            width: 68px;
+            vertical-align: middle;
+          }
+        }
+        ul{
+          float: left;
+          margin: 0 0 0 24px;
+          line-height: 68px;
+          vertical-align: middle;
+          li{
+            float: left;
+            margin: 0 0 0 10px;
+            a{
+              display: block;
+              line-height: 68px;
+              img{
+                width: 133px;
+                height: 40px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+    .iphone-img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      height: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

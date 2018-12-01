@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require font-awesome
+ */
+@import "config/reset";
+@import "font-awesome";
+@import "modules/top";
+@import "modules/nav";
+@import "modules/aside";
+@import "modules/footer";
+@import "top/main";
+@import "./sections";
+@import "users/login";
+@import "mixins/edit";
+@import "mixins/mixin";

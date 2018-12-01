@@ -1,0 +1,84 @@
+.pc-header{
+  position: relative;
+  z-index: 1001;
+  background-color: #fff;
+  a{
+    color: #333;
+  }
+  &__inner{
+    width: 1020px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+      .pc-header h1 a{
+        display: block;
+        color: #333;
+      }
+    .pc-header-form{
+      position: relative;
+      width: calc(100% - (134px + 16px));
+      float: right;
+      .input-default{
+        width: 100%;
+        height: 36px;
+        padding: 9px 32px 9px 8px;
+        background: #fafafa;
+        transition: all ease-out .3s;
+      }
+      .icon-search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+    .pc-header-nav-box{
+      margit-top: 8px;
+      .pc-header-nav li{
+        display: inline-block;
+        h2{
+          font-size: 14px;
+          font-weight: 400;
+          .pc-header-nav-root{
+            position: relative;
+            height: 38px;
+            line-height: 38px;
+          }
+          .pc-header-nav a{
+            display: block;
+            color: #333;
+          }
+        }
+      }
+      .pc-header-user-nav li{
+        position: relative;
+        display: inline-block;
+        padding: 0 0 0 16px;
+        vertical-align: middle;
+        .no-image{
+          overflow: hidden;
+          border-radius: 50%;
+          width: 32px;
+          vertical-align: middle;
+        }
+        .sp-header-user-icon div{
+          display: inline-block;
+          margin: 0 0 0 8px;
+          font-size: 14px;
+          vertical-align: middle;
+        }
+        .icon-bell{
+          font-size: 17px;
+        }
+        .icon-check{
+          font-size: 16px;
+        }
+        span{
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+  }
+}
