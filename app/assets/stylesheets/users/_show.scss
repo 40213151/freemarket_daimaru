@@ -1,0 +1,49 @@
+.mypage-user-icon{
+  height: 200px;
+  position: relative;
+  padding: 20px;
+  background-image: url("mypage_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    color: #333;
+  }
+  figure{
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    img{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  h2{
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+}
+
+.mypage-number{
+  margin: 8px 0 0;
+  font-size: 0;
+  div{
+    display: inline-block;
+    font-size: 14px;
+  }
+  div+div{
+    margin: 0 0 0 16px;
+  }
+  span{
+    margin: 0 0 0 8px;
+    font-size: 16px;
+  }
+}
