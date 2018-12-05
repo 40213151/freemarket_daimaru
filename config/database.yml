@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: freemarket_daimaru_production
-  username: freemarket_daimaru
-  password: <%= ENV['FREEMARKET_DAIMARU_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
