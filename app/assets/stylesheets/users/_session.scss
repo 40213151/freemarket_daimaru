@@ -1,0 +1,249 @@
+.input-default{
+  height: 45px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  fint-size: 16px;
+}
+
+.form-group{
+  margin: 24px 0 0;
+  label{
+    font-weight: 600;
+  }
+  .select-wrap{
+    margin: 8px 0 0;
+  }
+  select{
+    width: 100%;
+  }
+}
+
+.form-group:first-child{
+  margin: 0;
+}
+
+.form_require{
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.birthday-select-wrap{
+  display: inline-block;
+  .select-wrap{
+    width: 140px;
+    display: inline-block;
+  }
+  span{
+      margin: 0 8px;
+    }
+}
+
+.select-wrap{
+  position: relative;
+  background: #fff;
+  .icon-arrow-bottom{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 25px;
+    transform: translate(0, -50%);
+  }
+}
+
+.select-default{
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursol: pointer;
+}
+
+.single-container{
+  padding: 0 0 220px;
+  .single-header{
+    height: 128px;
+    text-align: center;
+    h1{
+      margin: 40px 0 0;
+      display: inline-block;
+    }
+    a{
+      width: 185px;
+      height: 49px;
+      line-height: 49px;
+      display: inline-block;
+      margin: 0 8px 0 0;
+      img{
+        width: 185px;
+        height: 49px;
+      }
+    }
+  }
+}
+
+.btn-default{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-red{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+
+.mypage-nav-head{
+  margin: 40px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main{
+  display: block;
+  .login-panel{
+    max-width: none;
+    width: 456px;
+    margin: 0 auto;
+    background: #fff;
+    a{
+      color: #0099e8;
+      display: block;
+      margin: 40px 0 0;
+    }
+    &__no-account{
+      padding: 40px 64px;
+      text-align: center;
+      p{
+        font-soze: 14px;
+      }
+      a{
+        display: block;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background: #0099e8;
+        color: #fff;
+        line-height: 40px;
+      }
+    }
+    .login-form-inner{
+      padding: 32px 64px;
+      border-top: 1px solid #eee;
+      .input-default{
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .login-form-inner:first-child{
+      padding: 24px 64px 32px;
+      border: 0;
+    }
+    .btn-default{
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-sns{
+      position: relative;
+      i{
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translate(0, -50%);
+      }
+    }
+
+    .login-submit{
+      margin: 24px 0 0;
+    }
+    .btn-sns-facebook{
+      margin: 0;
+      background: #385185;
+      color: #fff;
+      .icon-facebook{
+        color: #fff;
+        background: #385185;
+        font-size: 18px;
+      }
+    }
+    .btn-sns-google{
+      margin: 16px 0 0;
+      background: #dc4e41;
+      color: #fff;
+      .icon-google-plus{
+        color: #fff;
+        background: #dc4e41;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.single-footer{
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 40px 0;
+  text-align: center;
+  &__logo{
+    width: 80px;
+    height: 65px;
+    img{
+      width: 80px;
+      height: 65px;
+      margin: 40px auto 0;
+    }
+  }
+  li{
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 0 16px;
+    a{
+      display: block;
+      color: #333;
+    }
+  }
+  li:first-child{
+    margin: 0;
+  }
+  p{
+    margin: 8px 0 0;
+    small{
+      font-size: 12px;
+    }
+  }
+}
+
+.l-single-content{
+  max-width: 320px;
+  margin: 0 auto;
+}
