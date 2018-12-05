@@ -1,0 +1,81 @@
+.global-footer{
+  padding: 60px 0;
+  text-align: center;
+  background: #212121;
+  color: #fff;
+  nav{
+    width: 1130px;
+    margin: 0 auto;
+    ul{
+      list-style: none;
+      li{
+        color: #333;
+      }
+      .footer-cell{
+        display: inline-block;
+        width: 20%;
+        margin: 0 2% 0 0;
+        vertical-align: top;
+        &__head{
+          color: #fff;
+          font-size: 18px;
+        }
+        li:first-child{
+          margin: 24px 0 0;
+        }
+        li{
+          margin: 16px 0 0 0;
+        }
+        a{
+          display: block;
+          color: #fff;
+        }
+        &__lang a{
+          width: auto;
+          img{
+            width: 22px;
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-logo{
+    display: block;
+    margin: 40px 0 0;
+    text-align: center;
+    color: #fff;
+    img{
+      width: 124px;
+      height: 33px;
+      vertical-align: middle;
+    }
+  }
+  .footer-copyright{
+    margin: 8px 0 0 ;
+    text-align: center;
+    small{
+      font-size: 14px;
+    }
+  }
+}
+
+.footer-sell-btn{
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  border-radius: 50%;
+  background: #ea352d;
+  color: #fff;
+  text-align: center;
+  div{
+    margin: 32px 0 0;
+  }
+  .icon-camera{
+    margin: 8px 0 0;
+    font-size: 54px;
+  }
+}

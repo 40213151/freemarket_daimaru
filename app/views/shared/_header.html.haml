@@ -1,0 +1,38 @@
+%header.pc-header
+  .pc-header__inner
+    .clearfix
+      %h1.l-left
+        %a
+          = image_tag 'mercari_top.svg' , width: '134'
+      %form.pc-header-form.l-right
+        / = text_field_tag ,class:'input-default', placeholder: 'キーワードから探す'
+        %input.input-default{placeholder: 'キーワードから探す', type:'search'}
+        = fa_icon 'search', class: 'icon-search'
+    .pc-header-nav-box.clearfix
+      %nav.l-left
+        %ul.pc-header-nav
+          %li
+            %h2
+              %a.pc-header-nav-root
+                カテゴリーから探す
+          %li
+            %h2
+              %a.pc-header-nav-root
+                ブランドから探す
+      %nav.l-right
+        %ul.pc-header-user-nav
+          %li
+            %a.sp-header-user-icon.pc-header-nav-root
+              = image_tag 'member_photo_noimage_thumb.png' ,class:'no-image'
+              %div
+                マイページ
+          %li
+            %a.pc-header-nav-root
+              = fa_icon 'bell', class: 'icon icon-bell'
+            %span
+              おしらせ
+          %li
+            %a.pc-header-nav-root
+              = fa_icon 'check', class: 'icon-check'
+            %span
+              やることリスト
