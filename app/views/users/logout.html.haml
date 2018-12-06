@@ -1,0 +1,12 @@
+.default-container
+  = render 'shared/header'
+  = render 'shared/nav'
+  %main.l-container.clearfix
+    .l-content
+      %section.l-chapter-container
+        %form.l-single-inner
+          .l-single-content
+            %button.btn-default.btn-red ログアウト
+    .l-side
+      = render 'shared/side'
+  = render 'shared/footer'
