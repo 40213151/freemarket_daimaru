@@ -15,6 +15,80 @@
             %div
               出品数
               %span.bold 0
+      %section.mypage-container
+        %ul.mypage-tabs
+          %li.mypage-tabs__active
+            %h3
+              %a お知らせ
+          %li.mypage-tabs
+            %h3
+              %a やることリスト
+        .tab-content
+          %ul.tab-content__panel.active
+            %li
+              %a.mypage-item-link
+                %figure
+                  = image_tag 'mercari_profile.png'
+                .mypage-item-body
+                  .mypage-item-text 有効期限が近づいているポイントがあります
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span ２日前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+            %li
+              %a.mypage-item-link
+                %figure
+                  = image_tag 'mercari_profile.png'
+                .mypage-item-body
+                  .mypage-item-text 有効期限が近づいているポイントがあります
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span ２日前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+            %li
+              %a.mypage-item-link
+                %figure
+                  = image_tag 'mercari_profile.png'
+                .mypage-item-body
+                  .mypage-item-text 有効期限が近づいているポイントがあります
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span ２日前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+            %li
+              %a.mypage-item-link
+                %figure
+                  = image_tag 'mercari_profile.png'
+                .mypage-item-body
+                  .mypage-item-text 有効期限が近づいているポイントがあります
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span ２日前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+            %li
+              %a.mypage-item-link
+                %figure
+                  = image_tag 'mercari_profile.png'
+                .mypage-item-body
+                  .mypage-item-text 有効期限が近づいているポイントがあります
+                  %time
+                    = fa_icon 'calendar', class: 'icon-time'
+                    %span ２日前
+                = fa_icon 'chevron-right', class: 'icon-arrow-right'
+            %li.mypage-go-list
+              %a 一覧を見る
+      %section.mypage-tab-container
+        %h2.mypage-tab-container__head 購入した商品
+        %ul.mypage-tabs
+          %li.mypage-tabs__active
+            %h3
+              %a 取引中
+          %li
+            %h3
+              %a 過去の取引
+        .tab-content
+          %ul.tab-content__panel.active
+            %li.mypage-item-not-found.bold 取引中の商品がありません
     .l-side
       = render 'shared/side'
   = render 'shared/footer'
