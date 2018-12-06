@@ -47,3 +47,135 @@
     font-size: 16px;
   }
 }
+
+.mypage-container{
+  margin: 0;
+  background: #fff;
+}
+
+.mypage-tabs{
+  border: 0;
+  background: #eee;
+  font-size: 0;
+  &__active{
+    background: #fff;
+    a{
+      border-top: 2px solid #ea352d;
+    }
+  }
+  li{
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+  }
+  a{
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    line-height: 72px;
+  }
+}
+
+.tab-content{
+  &__panel{
+    display: block;
+    li{
+      position: realtive;
+      border-bottom: 1px solid #eee;
+    }
+    li:last-child{
+      border: 0;
+      padding: 16px;
+    }
+    li.mypage-item-not-found{
+      padding: 160px 0 60px;
+      border: 0;
+    }
+    img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
+  }
+}
+
+.mypage-item-link{
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+  position: relative;
+  figure{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  }
+  time{
+    display: inline-block;
+    color: #888;
+    span{
+      vertical-align: middle;
+    }
+  }
+  .icon-time{
+    margin: 0 8px 0 0;
+  }
+  .icon-arrow-right{
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translate(0, -50%);
+  }
+}
+
+.mypage-item-body{
+  margin: 0 40px 0 68px;
+}
+
+.mypage-item-text{
+  overflow: hidden;
+  display: -webkit-box;
+  max-height: 4.4em;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.mypage-go-list{
+  a{
+    display: block;
+    height: 56px;
+    margin: 0 auto;
+    background: #eee;
+    color: #333;
+    line-height: 56px;
+    text-align: center;
+  }
+}
+
+.mypage-tab-container{
+  margin: 40px 0 0;
+  background: #fff;
+  &__head{
+    padding: 0 16px;
+    backgrond: #fafafa;
+    font-size: 16px;
+    line-height: 72px;
+  }
+}
+
+.mypage-item-not-found{
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  background-size: 78px 85px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
