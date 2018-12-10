@@ -34,7 +34,7 @@ gem 'erb2haml'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "font-awesome-rails"
-
+gem "devise"
 group :production do
   gem 'unicorn'
 end
