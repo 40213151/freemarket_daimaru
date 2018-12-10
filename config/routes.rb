@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'items#index'
   get "users/login" => 'users#login'
   get "users/logout" => 'users#logout'
