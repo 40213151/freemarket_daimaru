@@ -1,0 +1,60 @@
+.single-container
+  %header.single-header
+    %h1
+      %a
+        = image_tag 'logo.svg'
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.active
+          会員情報
+          .progress-status
+        %li
+          電話番号認証
+          .progress-status
+        %li
+          住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.single-main
+    %section.l-single-container
+      %h2.l-single-container__head 会員情報入力
+      .l-single-inner
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .l-single-content
+            .form-group
+              = f.label :ニックネーム
+              %span.form-require 必須
+              = f.text_field :nickname, autofocus: true, placeholder: '例)メルカリ太郎', class: 'login-input-text input-default'
+            .form-group
+              = f.label :メールアドレス
+              %span.form-require 必須
+              = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可', type:'email', class: 'login-input-text input-default'
+            .form-group
+              = f.label :パスワード
+              %span.form-require 必須
+              = f.password_field :password, autocomplete: "new-password",placeholder: '６文字以上', type:'password',class: 'login-input-text input-default'
+            .form-group
+              = f.label :'パスワード (確認)'
+              %span.form-require 必須
+              = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '６文字以上', type:'password',class: 'login-input-text input-default'
+            / %button.btn-default.btn-red 次に進む
+            = f.submit "次に進む", class: 'btn-default btn-red'
+  %footer.single-footer
+    %nav
+      %ul.clearfix
+        %li
+          %a プライポリシー
+        %li
+          %a メルカリ利用規約
+        %li
+          %a 特定商取引に関する表記
+    %a.single-footer__logo
+      = image_tag 'logo-gray.svg'
+    %p
+      %smal © 2018 Mercari
