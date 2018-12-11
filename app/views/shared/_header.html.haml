@@ -25,7 +25,7 @@
             %a.sp-header-user-icon.pc-header-nav-root
               = image_tag 'member_photo_noimage_thumb.png' ,class:'no-image'
               %div
-                マイページ
+                = current_user.nickname
           %li
             %a.pc-header-nav-root
               = fa_icon 'bell', class: 'icon icon-bell'
