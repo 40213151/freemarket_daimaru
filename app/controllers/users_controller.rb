@@ -1,19 +1,10 @@
 class UsersController < ApplicationController
-  def new
+  def show
   end
 
   def new1
   end
 
-  def login
-  end
-
   def logout
-  end
-
-  def show
-  end
-
-  def edit
   end
 end
