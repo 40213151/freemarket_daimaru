@@ -3,45 +3,20 @@
     %h1
       %a
         = image_tag 'logo.svg'
-    %nav.progress-bar.signup-bar
-      %ol.clearfix
-        %li.active
-          会員情報
-          .progress-status
-        %li
-          電話番号認証
-          .progress-status
-        %li
-          住所入力
-          .progress-status
-        %li
-          支払い方法
-          .progress-status
-        %li
-          完了
-          .progress-status
   %main.single-main
     %section.l-single-container
-      %h2.l-single-container__head 会員情報入力
-      %form.l-single-inner
+      %h2.l-single-container__head 新規会員登録
+      .l-single-inner
         .l-single-content
-          .form-group
-            %label ニックネーム
-            %span.form-require 必須
-            %input.input-default.login-input-text{placeholder: '例)メルカリ太郎', type:'text'}
-          .form-group
-            %label メールアドレス
-            %span.form-require 必須
-            %input.input-default.login-input-text{placeholder: 'PC・携帯どちらでも可', type:'email'}
-          .form-group
-            %label パスワード
-            %span.form-require 必須
-            %input.input-default.login-input-text{placeholder: '６文字以上', type:'password'}
-          .form-group
-            %label パスワード(確認)
-            %span.form-require 必須
-            %input.input-default.login-input-text{placeholder: '６文字以上', type:'password'}
-          %button.btn-default.btn-red 次に進む
+          = link_to new_user_registration_path, class:'btn-default btn-mail' do
+            = fa_icon 'envelope', class: 'icon-mail'
+            メールアドレス
+          %button.btn-default.btn-sns.btn-sns-facebook
+            = fa_icon 'facebook-square', class: 'icon-facebook'
+            facebookでログイン
+          %button.btn-default.btn-sns.btn-sns-google
+            = fa_icon 'google-plus-square', class: 'icon-google-plus'
+            Googleでログイン
   %footer.single-footer
     %nav
       %ul.clearfix
