@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'items#index'
-  get "users/logout" => 'users#logout'
-  resources :users, only: [:new,:show,:edit]
+  devise_for :users
+  resources :users, only: [:new,:show,:edit] do
+    get :logout, on: :collection
+  end
 end
