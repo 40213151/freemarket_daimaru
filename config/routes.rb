@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:new,:show,:edit] do
     collection do
-      get :search
+      get :logout
     end
   end
 end
