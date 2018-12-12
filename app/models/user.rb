@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :items, dependent: :destroy
   has_many :user_profiles, dependent: :destroy
-  validates :nickname, presence: true, length: { maximum: 20 }
+  validates :nickname, length: { maximum: 20 }
 end
