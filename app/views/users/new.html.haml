@@ -17,16 +17,4 @@
           %button.btn-default.btn-sns.btn-sns-google
             = fa_icon 'google-plus-square', class: 'icon-google-plus'
             Googleでログイン
-  %footer.single-footer
-    %nav
-      %ul.clearfix
-        %li
-          %a プライポリシー
-        %li
-          %a メルカリ利用規約
-        %li
-          %a 特定商取引に関する表記
-    %a.single-footer__logo
-      = image_tag 'logo-gray.svg'
-    %p
-      %smal © 2018 Mercari
+  = render 'shared/footer2'

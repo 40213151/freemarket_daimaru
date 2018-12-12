@@ -45,16 +45,4 @@
               = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '６文字以上', type:'password',class: 'login-input-text input-default'
             / %button.btn-default.btn-red 次に進む
             = f.submit "次に進む", class: 'btn-default btn-red'
-  %footer.single-footer
-    %nav
-      %ul.clearfix
-        %li
-          %a プライポリシー
-        %li
-          %a メルカリ利用規約
-        %li
-          %a 特定商取引に関する表記
-    %a.single-footer__logo
-      = image_tag 'logo-gray.svg'
-    %p
-      %smal © 2018 Mercari
+  = render 'shared/footer2'
