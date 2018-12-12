@@ -6,7 +6,7 @@
       %section.l-chapter-container
         %form.l-single-inner
           .l-single-content
-            %button.btn-default.btn-red ログアウト
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn-default btn-red'
     .l-side
       = render 'shared/side'
   = render 'shared/footer'

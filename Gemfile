@@ -34,7 +34,7 @@ gem 'erb2haml'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "font-awesome-rails"
-
+gem "devise"
 group :production do
   gem 'unicorn'
 end
@@ -50,6 +50,11 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'faker'
 end
 
 group :development do

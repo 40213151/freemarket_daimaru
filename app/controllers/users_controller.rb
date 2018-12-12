@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
-  def login
-  end
 
-  def logout
-  end
+  before_action :authenticate_user!, except: [:new]
 
   def show
   end
