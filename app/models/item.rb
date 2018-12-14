@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   has_one :brand
-  has_many :images, dependent::destroy
+  has_many :images, dependent: :destroy
   belongs_to :user
   validates :name, length: { maximum: 20 }
   validates :description, length: { maximum: 20 }
