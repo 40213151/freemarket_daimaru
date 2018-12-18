@@ -93,3 +93,57 @@
     }
   }
 }
+
+.l-chapter-container:first-child{
+  margin: 0;
+  background: #fff;
+  &__head{
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+  }
+}
+.setting-profile-icon{
+  padding: 72px 16px 24px;
+  background-image: url("http://blogimg.goo.ne.jp/user_image/0f/99/24f9145ed5ca6b5aa8885f3b3d606bd2.png");
+  background-repeat: no-repear;
+  background-size: cover;
+  text-align: center;
+  font-size: 0;
+  figure{
+    display: inline-block;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    img{
+      vertical-align: middle;
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .input-default{
+    width: 220px;
+    margin:0 0 0 8px;
+    vertical-align: middle;
+  }
+}
+.setting-profile-content{
+  padding: 40px 16px;
+  .textarea-default{
+    min-height: 216px;
+  }
+  .btn-red{
+  margin: 16px 0 0;
+  }
+}
+.textarea-default{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
