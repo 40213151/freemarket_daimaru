@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181214050818) do
+ActiveRecord::Schema.define(version: 20181217074637) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image",      null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20181214050818) do
     t.text     "description",     limit: 65535, null: false
     t.string   "condition",                     null: false
     t.string   "delivery_method",               null: false
-    t.integer  "delivery_days"
+    t.integer  "delivery_days",                 null: false
     t.string   "price",                         null: false
     t.integer  "brand_id"
     t.integer  "user_id"
