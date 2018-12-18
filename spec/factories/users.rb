@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :user do
     nickname              "daimaru"
     email                 "ddd@gmail.com"

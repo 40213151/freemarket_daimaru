@@ -20,50 +20,7 @@
           %a.new-item-blue
             レディース新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section2
@@ -72,50 +29,7 @@
           %a.new-item-blue
             メンズ新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section3
@@ -124,50 +38,7 @@
           %a.new-item-blue
             ベビー・キッズ新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section4
@@ -176,50 +47,7 @@
           %a.new-item-blue
             コスメ・香水・美容新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
     %section.pickup-container
@@ -229,50 +57,7 @@
           %a.new-item-blue
             レディース新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section2
@@ -281,50 +66,7 @@
           %a.new-item-blue
             メンズ新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section3
@@ -333,50 +75,7 @@
           %a.new-item-blue
             ベビー・キッズ新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
           / section4
@@ -385,50 +84,7 @@
           %a.new-item-blue
             コスメ・香水・美容新着アイテム
         .items-box-content.clearfix
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
-          %section.items-box
-            %figure.items-box__photo
-              = image_tag 'sample_item.jpg', class: 'is-higher-width'
-            .items-box__body
-              %h3.items-box__body__name.font-2 パーカー
-              .items-box__body__num.clearfix
-                .items-box__body__num__price.font-5 ¥5,00
-                .items-box__body__num__likes.font-2
-                  = fa_icon 'heart', class: 'icon-like-border'
-                  %span 0
-                %p.items-box__body__num__tax (税込)
+          = render @items
         .view-all
           %a 全ての商品を見る
   = render 'shared/footer'
