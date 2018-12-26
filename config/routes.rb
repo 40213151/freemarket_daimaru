@@ -6,5 +6,5 @@ Rails.application.routes.draw do
       get :logout
     end
   end
-  resources :items, only: [:new, :index]
+  resources :items, only: [:new, :index, :show]
 end
