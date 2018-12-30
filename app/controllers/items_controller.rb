@@ -7,5 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @items = Item.where.not(id: @item.id).order("RAND()").limit(6)
   end
 end

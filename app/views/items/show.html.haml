@@ -2,7 +2,8 @@
   = render 'shared/header'
   = render 'shared/nav'
   %section.l-single-container.item-box-container
-    %h1.item_name パーカー
+    %h1.item_name
+      = @item.name
     .item-main-content.clearfix
       .item-photo
         .owl-carousel.owl-loaded.owl-drag
@@ -10,14 +11,15 @@
             .owl-stage{style: "left:0px; width: 1200px;"}
               .owl-item{style: "width: 300px;"}
                 .owl-item-inner.is-higher-width
-                  = image_tag "sample_item.jpg",class: 'owl-lazy',style: "opacity: 1;"
+                  = image_tag "#{@item.images.first.image}",class: 'owl-lazy',style: "opacity: 1;"
       %table.item-detail-table
         %tbody
           %tr
             %th
               出品者
             %td
-              %a だいまる♡
+              %a
+                = @item.user.nickname
               %div
                 %div.item-user-ratings
                   = fa_icon 'smile', class: 'icon-good'
@@ -52,58 +54,43 @@
             %th
               商品のサイズ
             %td
-              FREE SIZE
+              = @item.size
           %tr
             %th
               商品の状態
             %td
-              未使用に近い
+              = @item.condition
           %tr
             %th
               配送者の負担
             %td
-              送料込み(出品者負担)
+              = @item.delivery_burden
           %tr
             %th
               配送の方法
             %td
-              ゆうゆうメルカリ便
+              = @item.delivery_method
           %tr
             %th
               配送元地域
             %td
-              未定
+              = @item.delivery_from
           %tr
             %th
               発送日の目安
             %td
-              4~7日で発送
+              = @item.delivery_days
+              日
     .item-price-box.text-center
-      %span.item-price.bold ¥ 9,900
+      %span.item-price.bold
+        ¥
+        = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     %a.item-buy-btn.f18-24 購入画面に進む
     .item-description.f14
       %p.item-description__inner
-        購入して試着のみの美品です(^-^)
-
-        ホームクリーニング済み
-        サイズ フリー
-
-        ＃レース と #ビジュー がとっても可愛いです♡
-
-        ＃AW #秋冬 #ドレス #結婚式 #おしゃれ #パール #お呼ばれ服 #パーティー
-
-
-        お値下げは不可です。
-        この金額で購入して下さる方お願い致します。
-
-        ✽.。.:*・゜ ✽.。.:*・゜ ✽.。.:*・゜ ✽.。.:*・゜ ✽.。.:*・゜
-        エミリアウィズ ジルスチュアート イング アラマンダ
-        ロディスポット マーキュリーデュオ リズリサ
-        シークレットハニー ハニーサロン リリーブラウン
-        レッセパッセ アプワイザーリッシェ Rady
-        など好きな方も是非♡
+        = @item.description
     .item-button-container.clearfix
       .item-button-left
         %button.item-button.item-button__like
@@ -148,84 +135,9 @@
   .items-in-user-profile
     %section.items-box-container.clearfix.items-box-overflow.items-in-user-profile
       %h2.items-box-head
-        %a だいまる♡さんのその他の商品
+        %a
+          = @item.user.nickname
+          さんのその他の商品
       .items-box-content.clearfix
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
-        %section.items-box
-          %figure.items-box__photo
-            = image_tag "sample_item.jpg"
-          .items-box__body
-            %h3.items-box__body__name.font-2
-              けいいちろう
-            .items-box__body__num.clearfix
-              .items-box__body__num__price.font-5
-                600
-              .items-box__body__num__likes.font-2
-                = fa_icon 'heart', class: 'icon-like-border'
-                %span 0
-              %p.items-box__body__num__tax (税込)
+        = render @items
   = render 'shared/footer'
