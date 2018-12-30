@@ -102,6 +102,8 @@
     = image_tag 'logo-white.svg'
   %p.footer-copyright
     %small © 2018 Mercari
-%a.footer-sell-btn
-  %div 出品
-  = fa_icon 'camera', class: 'icon-camera'
+  = link_to new_item_path do
+    .footer-sell-btn
+      %div
+        出品
+      = fa_icon 'camera', class: 'icon-camera'
