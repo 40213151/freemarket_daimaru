@@ -8,6 +8,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @items = Item.where.not(id: @item.id).limit(6)
+    @items = Item.where.not(id: @item.id).order("RAND()").limit(6)
   end
 end
