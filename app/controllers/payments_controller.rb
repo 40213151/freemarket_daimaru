@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
   protect_from_forgery :except => [:create]
   before_action :set_pay_jp_api_key, only: [:create]
-  set_item :set_item
+  before_action :set_item
 
   def create
     customer_id = current_user.card.customer_id
