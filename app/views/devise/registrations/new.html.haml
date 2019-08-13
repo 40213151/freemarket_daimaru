@@ -24,7 +24,8 @@
     %section.l-single-container
       %h2.l-single-container__head 会員情報入力
       .l-single-inner
-        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        / = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = form_with url: user_info_keep_path do |f|
           = devise_error_messages!
           .l-single-content
             .form-group

@@ -1,0 +1,26 @@
+.default-container
+  = render 'shared/header'
+  %main.search-container.l-container.clearfix
+    .l-content
+    .l-side
+      %form.search-extend-container.search-extend-form
+        .search-sort
+          .form-group
+            .select-wrap
+              %select.select-default
+              = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+        .search-dropdown-content.search-extend
+          %h3.visible-large 詳細検索
+          .form-group.form-group-first
+            %label
+              %i.fas.fa-plus
+              %span キーワードを追加する
+            %input.input-default{placeholder: '例）値下げ'}
+          .form-group
+            %label
+              %i.fas.fa-list
+              %span カテゴリーを選択する
+            .select-wrap
+              %select.select-default
+              = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+  = render 'shared/footer'

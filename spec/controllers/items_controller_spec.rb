@@ -33,7 +33,7 @@ describe ItemsController do
       end
       it "renders the :show template" do
         item = create(:item)
-        get :show, id: item
+        get :show, params: { id: item.id }
         expect(response).to render_template :show
       end
     end
@@ -47,5 +47,8 @@ describe ItemsController do
         expect(response).to redirect_to(new_user_session_path)
       end
     end
+  end
+
+  describe '' do
   end
 end

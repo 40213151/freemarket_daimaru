@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'wicked'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use mysql as the database for Active Record
@@ -34,8 +34,16 @@ gem 'erb2haml'
 # gem 'capistrano-rails', group: :development
 gem "font-awesome-rails"
 gem 'enum_help'
+gem 'jp_prefecture'
 gem "devise"
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'ancestry'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'payjp'
+
 group :production do
   gem 'unicorn'
 end
@@ -56,6 +64,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -66,6 +75,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+gem 'jquery-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

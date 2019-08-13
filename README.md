@@ -131,3 +131,16 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :item, dependent: :destroy,foreign_key: "item_id"
+
+## usersテーブル
+<!-- 本来 Column,Type,Optionsと指定すべき箇所をなぜか各カラム名を書いている -->
+|id|nickname|email|
+|------|----|-------|
+|id|string|null: false|
+|nickname|string|null: false|
+|email|string|null: false|
+
+### Association
+<!-- tweeetテーブルcommentsテーブルはchatspaceに存在しないはず -->
+- has_many :tweets
+- has_many :comments
