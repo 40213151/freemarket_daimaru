@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190711082120) do
+ActiveRecord::Schema.define(version: 2019_07_11_082120) do
 
-  create_table "brands", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "brands", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_brands_on_name"
   end
 
-  create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "pay_id", null: false
     t.string "customer_id", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
-  create_table "images", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "images", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
     t.integer "item_id"
     t.datetime "created_at", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["item_id"], name: "index_images_on_item_id"
   end
 
-  create_table "item_categories", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "item_categories", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "item_id"
     t.integer "maincategory_id"
     t.datetime "created_at", null: false
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["maincategory_id"], name: "index_item_categories_on_maincategory_id"
   end
 
-  create_table "items", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "items", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
     t.integer "condition", null: false
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
-  create_table "maincategories", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "maincategories", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["ancestry"], name: "index_maincategories_on_ancestry"
   end
 
-  create_table "plofiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "plofiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "first_name_kana", null: false
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20190711082120) do
     t.index ["user_id"], name: "index_plofiles_on_user_id"
   end
 
-  create_table "users", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
