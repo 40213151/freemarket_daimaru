@@ -1,0 +1,13 @@
+ja:
+  enums:
+    product:
+      delivery_days:
+        one_or_two_days: 1~2日で発送
+        two_or_three_days: 2~3日で発送
+        four_to_seven_days: 4~7日で発送
+      condition:
+        unused: 新品、未使用
+        almost_unused: 未使用に近い
+        used: 目立った傷や汚れなし
+        a_little_dirty: やや傷や汚れあり
+        dirty: 傷や汚れあり

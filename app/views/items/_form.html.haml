@@ -1,0 +1,147 @@
+.single-container
+  %header.single-header
+    %h1
+      %a
+        = image_tag 'logo.svg'
+  %main.l-single-container.buy-item-container
+    .sell-container
+      #data-reactroot
+        .sell-container-inner
+          %h2.l-single-head 商品の情報を入力
+          %form.sell-form
+          = form_with model: @item ,class: 'sell-form' do |f|
+            .sell-upload-box
+              %h3.sell-upload-box__head
+                出品画像
+                %span.form-require 必須
+              %p 最大4枚までアップロードできます
+              .sell-upload-container.clearfix.state-image-number-10
+              #image-box
+                #previews
+                - if @item.persisted?
+                  = f.fields_for :images do |c|
+                    %li.sell-upload-item{data: {index: c.index}}
+                      %figure.sell-upload-figure.squarw
+                        = image_tag "#{c.object.image}",{data: {index: c.index}}
+                      .sell-upload-button{data: {index: c.index}}
+                        %label.sell-upload-edit.a{:for => "item_images_attributes_#{c.index}_image"}
+                          編集
+                        = c.file_field :image, class: 'js-file sell-upload-container__drop-box__file'
+                        %span.js-remove.a
+                          削除
+                    = c.check_box :_destroy, id:c.index , class: 'hidden-destroy'
+                - else
+                  = f.fields_for :images do |c|
+                    .js-file_group{data: {index: c.index}}
+                      = c.label :image, class: 'sell-upload-container__drop-box'
+                      = c.file_field :image,class: 'sell-upload-container__drop-box__file js-file js'
+                      %span.js-remove
+                        削除
+                - if @item.persisted?
+                  .js-file_group{data: {index: @item.images.count}}
+                    %label.sell-upload-container__drop-box{:for => "item_images_attributes_#{@item.images.count}_image"}
+                    = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file sell-upload-container__drop-box__file', id: "item_images_attributes_#{@item.images.count}_image"
+            .sell-content
+              .form-group
+                %label
+                  商品名
+                  %span.form-require 必須
+                %div
+                  = f.text_field :name, class: 'input-default', placeholder: '商品名（必須 40文字まで)'
+              .form-group
+                %label
+                  商品の説明
+                  %span.form-require 必須
+                = f.text_area :description, class: 'textarea-default', placeholder: '例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪', rows: 5
+            .sell-content.clearfix
+              %h3.sell-sub-head 商品の詳細
+              .sell-form-box
+                .form-group
+                  %label
+                    カテゴリー
+                    %span.form-require 必須
+                  %div
+                    #category
+                      .select-wrap
+                        / %select.select-default
+                        = f.select :maincategory_id, Maincategory.roots.map {|i| ["#{i.name}", i.id]}, { selected: @item.maincategory_id, include_blank: true }, {id: "l_category", class: "select-default"}
+                        = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+                .form-group
+                  %label
+                    商品の状態
+                    %span.form-require 必須
+                  %div
+                    .select-wrap
+                      = f.select :condition, Item.conditions.keys, {}, class: "select-default"
+                      = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+            .sell-content.clearfix
+              %h3.sell-sub-head
+                配送について
+                %a.form-question ?
+              .sell-form-box
+                .form-group
+                  %label
+                    発送料の負担
+                    %span.form-require 必須
+                  %div
+                    .select-wrap
+                      = f.select :delivery_burden, Item.delivery_burdens.keys, {}, class: "select-default"
+                      = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+                .form-group
+                  %label
+                    発送元の地域
+                    %span.form-require 必須
+                  %div
+                    .select-wrap
+                      = f.select :delivery_from, Item.delivery_froms.keys, {}, class: "select-default"
+                      = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+                      = f.date_select :date_of_birth, use_month_numbers: true,class:'select-default',start_year: 1900, end_year: (Time.now.year), include_blank: '--' , date_separator: '年'
+                .form-group
+                  %label
+                    発送までの日数
+                    %span.form-require 必須
+                  %div
+                    .select-wrap
+                      = f.select :delivery_days, Item.delivery_days.keys, {}, class: "select-default"
+                      = fa_icon 'angle-down', class: 'icon-arrow-bottom'
+            .sell-content.clearfix
+              %h3.sell-sub-head
+                販売価格(300〜9,999,999)
+                %a.form-question ?
+              .sell-form-box
+                %ul.sell-price
+                  %li.form-group
+                    .clearfix
+                      %label.l-left
+                        価格
+                        %span.form-require 必須
+                      .l-right.sell-price__input
+                        ¥
+                        %div
+                          = f.text_field :price, class: 'input-default', placeholder: '例）300'
+                  %li.clearfix
+                    .l-left
+                      販売手数料(10%)
+                    .l-right
+                      -
+                  %li.clearfix.bold
+                    .l-left
+                      販売利益
+                    .l-right
+            .sell-content.sell-btn-box
+              %div
+                %p
+                  %a 禁止されている出品
+                  %a 行為
+                  を必ずご確認ください。
+                %p
+                  またブランド品でシリアルナンバー等がある場合はご記載ください。
+                  %a 偽ブランドの販売
+                  は犯罪であり処罰される可能性があります
+                %p
+                  また,出品をもちまして
+                  %a 加盟店規約
+                  に同意したことになります
+              = f.submit class: 'btn-default btn-red'
+              %a.btn-default.btn-glay もどる
+  = render 'shared/footer2'

@@ -1,0 +1,56 @@
+.single-container
+  %header.single-header
+    %h1
+      %a
+        = image_tag 'logo.svg'
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.active
+          会員情報
+          .progress-status
+        %li
+          電話番号認証
+          .progress-status
+        %li
+          住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.single-main
+    %section.l-single-container
+      %h2.l-single-container__head 電話番号の確認
+      = form_with url:phone_info_keep_path,class: "l-single-inner" do |f|
+        .l-single-content
+          .form-group
+            = f.label :携帯電話の番号
+            = f.text_field :cell_phone,class:"input-default",placeholder:"携帯電話の番号を入力",autofocus: true
+          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          = f.submit "SMSを送信する", class:"btn-default btn-red"
+          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+        / = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        / = form_with url: user_info_keep_path do |f|
+        /   = devise_error_messages!
+        /   .l-single-content
+        /     .form-group
+        /       = f.label :ニックネーム
+        /       %span.form-require 必須
+        /       = f.text_field :nickname, autofocus: true, placeholder: '例)メルカリ太郎', class: 'login-input-text input-default'
+        /     .form-group
+        /       = f.label :メールアドレス
+        /       %span.form-require 必須
+        /       = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可', type:'email', class: 'login-input-text input-default'
+        /     .form-group
+        /       = f.label :パスワード
+        /       %span.form-require 必須
+        /       = f.password_field :password, autocomplete: "new-password",placeholder: '６文字以上', type:'password',class: 'login-input-text input-default'
+        /     .form-group
+        /       = f.label :'パスワード (確認)'
+        /       %span.form-require 必須
+        /       = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '６文字以上', type:'password',class: 'login-input-text input-default'
+        /     / %button.btn-default.btn-red 次に進む
+        /     = f.submit "次に進む", class: 'btn-default btn-red'
+  = render 'shared/footer2'

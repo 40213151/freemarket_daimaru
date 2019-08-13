@@ -9,7 +9,7 @@
 }
 
 .form-group{
-  margin: 24px 0 0;
+  margin: 40px 0 0;
   label{
     font-weight: 600;
   }
@@ -20,13 +20,13 @@
     width: 100%;
   }
   .input-default{
-    width: 100%;
+    width: 80%;
     margin: 8px 0 0;
   }
 }
 
 .form-group:first-child{
-  margin: 0;
+  margin: 24px 0 0;
 }
 
 .form-require{
@@ -53,15 +53,16 @@
 .select-wrap{
   position: relative;
   background: #fff;
-  .icon-arrow-bottom{
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    z-index: 2;
-    color: #000;
-    font-size: 8px;
-    transform: translate(0, -50%);
-  }
+}
+
+.icon-arrow-bottom{
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #000;
+  font-size: 8px;
+  transform: translate(0, -50%);
 }
 
 .select-default{
@@ -354,7 +355,10 @@ main{
     border: 1px dashed #ccc;
     font-size: 0;
     text-align: center;
-    cursol: pointer;
+    cursor: pointer;
+    &__file{
+      display: none;
+    }
     pre{
       position: absolute;
       top: 50%;

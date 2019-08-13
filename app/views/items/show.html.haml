@@ -87,7 +87,9 @@
         = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
-    %a.item-buy-btn.f18-24 購入画面に進む
+      = form_tag(pay_item_path, method: :post) do
+        = submit_tag("購入画面に進む", class: "btn f18-24")
+      %a.item-buy-btn.f18-24 購入画面に進む
     .item-description.f14
       %p.item-description__inner
         = @item.description
