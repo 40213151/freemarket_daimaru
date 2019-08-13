@@ -3,7 +3,7 @@
 lock '3.11.0'
 
 # Capistranoのログの表示に利用する
-set :application, 'freemarket_daimary'
+set :application, 'freemarket_daimaru'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:40213151/freemarket_daimaru.git'
